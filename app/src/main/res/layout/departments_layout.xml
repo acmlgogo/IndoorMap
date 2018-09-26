@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--android:visibility="gone"-->
+    <RelativeLayout
+        android:id="@+id/activity_main_departments_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/activity_main_departments_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/window_shap">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/activity_main_departments_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"></android.support.v4.view.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/activity_main_departments_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    app:ci_drawable="@drawable/tab_click"
+                    app:ci_drawable_unselected="@drawable/tab_no"
+                    app:ci_height="10dp"
+                    app:ci_width="10dp">
+
+                </me.relex.circleindicator.CircleIndicator>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_main_centre_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_above="@+id/activity_main_departments_relativelayout"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/window_shap"
+                android:visibility="gone">
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/activity_main_department_classify_recyclerview"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:scrollbarStyle="outsideOverlay"-->
+                <!--android:scrollbarThumbHorizontal="@color/colorAccent"-->
+                <!--android:scrollbars="horizontal"></android.support.v7.widget.RecyclerView>-->
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/departments_viewpager"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp">
+
+                </android.support.v4.view.ViewPager>
+
+                <TextView
+                    android:id="@+id/departments_queue_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="暂无数据提供"
+                    android:textSize="30sp"
+                    android:visibility="gone" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/departments_queue_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    app:ci_drawable="@drawable/tab_click"
+                    app:ci_drawable_unselected="@drawable/tab_no"
+                    app:ci_height="10dp"
+                    app:ci_width="10dp"></me.relex.circleindicator.CircleIndicator>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/activity_main_close"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_above="@+id/activity_main_centre_relativelayout"
+                android:background="@drawable/ic_close_red_24dp"
+                android:onClick="close" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

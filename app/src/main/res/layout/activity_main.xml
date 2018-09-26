@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shine.indoormap.view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"></FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_function_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@color/functionButtonColor">
+
+            <TextClock
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:format12Hour="EEEE"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextClock
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_date"
+                android:layout_centerHorizontal="true"
+                android:format24Hour="MM月dd日 hh:mm"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+
+            <RadioGroup
+                android:id="@+id/activity_main_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" />
+
+                <RadioButton
+                    android:id="@+id/fragment_home_im_louyu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/louyu"
+                    android:gravity="center"
+                    android:text="@string/floorNavigation"
+                    android:textColor="@color/rippleColor"
+                    android:textSize="15sp" />
+                <!--android:drawableTop="@drawable/louyu"-->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/fragment_home_im_keshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/kesih"
+                    android:gravity="center"
+                    android:text="@string/departmentNavigation"
+                    android:textColor="@color/rippleColor"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/fragment_home_im_doctoer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/yisheng"
+                    android:gravity="center"
+                    android:text="@string/doctorIntroduce"
+                    android:textColor="@color/rippleColor"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/fragment_home_im_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/search"
+                    android:gravity="center"
+                    android:text="@string/search"
+                    android:textColor="@color/rippleColor"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/departments_layout"></include>
+
+    <include layout="@layout/search_layout"></include>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_actionbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_my_location_40dp"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/colorPrimary" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_backlook_actionbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp"
+        android:layout_toRightOf="@+id/main_actionbutton"
+        android:src="@drawable/back_look_24dp"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/colorPrimary" />
+
+
+    <com.shine.indoormap.view.customView.leochuan.actionButton.FloatingActionMenu
+        android:id="@+id/fabactionbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/main_actionbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="150dp"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorPressed="@color/colorPrimary"
+        fab:fab_colorRipple="@color/colorAccent"
+        fab:fab_elevationCompat="6dp"
+        fab:fab_shadowColor="#000"
+        fab:fab_size="mini" />
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="800dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/screensaver_im"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

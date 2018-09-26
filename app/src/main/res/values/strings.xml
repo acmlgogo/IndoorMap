@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IndoorMap</string>
+    <string name="navigation_condole">去这儿</string>
+    <string name="floorNavigation">楼宇导航</string>
+    <string name="departmentNavigation">科室导航</string>
+    <string name="doctorIntroduce">医生介绍</string>
+    <string name="search">快速查询</string>
+    <string name="time">出诊时间</string>
+    <string name="begoodat">擅长</string>
+    <string name="input_hint">请输入关键字</string>
+    <string name="plase_select_type">请选择行走方式</string>
+</resources>

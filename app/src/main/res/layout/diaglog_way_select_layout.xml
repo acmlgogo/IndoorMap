@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="330dp">
+
+    <TextView
+        android:id="@+id/tv_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="当前大楼上下楼梯方式选择"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/one_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_current"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/one_rb_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/way_select_elevator"
+            android:button="@null"
+            android:tag="5"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/one_rb_2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/way_select_louti"
+            android:button="@null"
+            android:tag="3"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/one_rb_3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/way_select_shoufulouti"
+            android:button="@null"
+            android:tag="4"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/one_rg"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="目标大楼上下楼梯方式选择"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/two_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_target"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/two_rb_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/way_select_elevator"
+            android:button="@null"
+            android:tag="5"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/two_rb_2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/way_select_louti"
+            android:button="@null"
+            android:tag="3"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/two_rb_3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/way_select_shoufulouti"
+            android:button="@null"
+            android:tag="4"
+            android:visibility="gone" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

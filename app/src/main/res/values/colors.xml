@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#64c4f4</color>
+    <color name="colorPrimaryDark">#f1a33f</color>
+    <color name="colorAccent">#35bab0</color>
+    <color name="functionButtonColor">#3C3C3C</color>
+    <color name="rippleColor">#FFCCCCCC</color>
+    <color name="way_color">#FFB802FF</color>
+    <color name="whiteColor">#FFFFFFFF</color>
+    <color name="dialogTextColor">#999999</color>
+    <color name="brightYellowColor">#FFF0FE11</color>
+    <color name="doctorcolor">#FFF3F3F3</color>
+    <color name="blackcolor">#000000</color>
+    <color name="loctaion_bg">#FFE9E7E7</color>
+    <color name="translucent_white">#e9f9f7f7</color>
+    <color name="location_bg">#bd0d0d0d</color>
+</resources>
